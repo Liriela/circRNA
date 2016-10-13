@@ -1,0 +1,25 @@
+.row {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+}
+.row > [class*='col-'] {
+  display: flex;
+  flex-direction: column;
+}
+.row-height {
+    height: auto;
+    text-align: center;    
+}
+
+.col-lg-4{
+    background-color: #e3e3e3;
+    border-radius: 15px 15px 15px 15px;
+}
+
+.grey {
+    background-color: #f5f3f3;
+    border-radius: 15px 15px 15px 15px;
+}

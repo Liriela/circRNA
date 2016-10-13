@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load staticfiles %}
+
+    {% block navigation %}
+
+      <div class="masthead">
+        <h3 class="text-muted">circRNA</h3>
+        <nav>
+          <ul class="nav nav-justified">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/list">Browse</a></li>
+            <!--<li><a href="#">Services</a></li>-->
+            <!--<li><a href="#">Downloads</a></li>-->
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    {% endblock %}
+    
+{% block content %}
+      <!-- Jumbotron -->
+      <div class="jumbotron">
+        <h1>Welcome to circRNA</h1>
+        <p class="lead">This is a test page for circRNA.</p>
+        <p><a class="btn btn-lg btn-success" href="/list" role="button">Browse</a></p>
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-lg-4 row-height">
+          <h2>test1</h2>
+          <p class="text-danger">Some danger</p>
+          <p>Some circRNA2. </p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4 grey row-height">
+          <h2>test2</h2>
+          <p>Some circRNA2.</p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+       </div>
+        <div class="col-lg-4 row-height">
+          <h2>test3</h2>
+          <p>Some circRNA3.</p>
+          <p><a class="btn btn-primary" href="#" role="button">View details &raquo;</a></p>
+        </div>
+      </div>
+{% endblock %}

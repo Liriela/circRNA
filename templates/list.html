@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+{% load i18n %}
+{% load staticfiles %}
+    {% block navigation %}
+             <div class="masthead">
+        <h3 class="text-muted">circRNA</h3>
+        <nav>
+          <ul class="nav nav-justified">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="/list">Browse</a></li>
+            <!--<li><a href="#">Services</a></li>-->
+            <!--<li><a href="#">Downloads</a></li>-->
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    {% endblock %}
+    
+{% block content %}
+
+<div class="row">
+ <table class="table table-bordered table-condensed">
+    <thead class="thead-inverse">
+   <tr class="bg-primary">
+    <th>Organism </th>
+   <th>Position (genome browser link)</th>
+    <th>Strand</th>
+    <th>circRNA ID</th>
+    <th>Genomic length</th>
+    <th>Spliced length</th>
+   <th> Samples</th>
+    <th>Scores</th>
+    <th>Repeats </th>
+    <th>Annotation</th>
+    <th>Best transcript</th>
+    <th>Ggene symbol</th>
+    <th>circRNA study</th>
+    <th>Comments</th>
+     </tr>
+   </thead>
+    <tbody>
+ {% for circRNA in circRNAs %}
+ 
+   <tr>
+       <td> {{ circRNA.organism }} </td>
+   <td><a href= {{ circRNA.position }}>[LINK]</a> </td>
+    <td> {{ circRNA.strand }} </td>
+    <td> {{ circRNA.circRNA_ID }} </td>
+    <td> {{ circRNA.genomic_length }} </td>
+    <td> {{ circRNA.spliced_length }} </td>
+   <td>  {{ circRNA.samples }} </td>
+    <td> {{ circRNA.scores }} </td>
+    <td> {{ circRNA.repeats }}  </td>
+    <td> {{ circRNA.annotation }} </td>
+    <td> {{ circRNA.best_transcript }} </td>
+    <td> {{ circRNA.gene_symbol }} </td>
+    <td> {{ circRNA.circRNA_study }} </td>
+    <td> {{ circRNA.comments }} </td>
+   </tr>
+     
+ {% endfor %}
+ </tbody>
+ </table>
+</div>
+{% endblock%} 
