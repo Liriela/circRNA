@@ -4,5 +4,5 @@ var options = {
   valueNames: [ 'title' ]
 };
 
-var userList = new List('samplelist2', options);
+var userList = new List('list', options);
 }
